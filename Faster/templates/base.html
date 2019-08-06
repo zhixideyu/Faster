@@ -1,0 +1,117 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="//file.ipadown.com">
+    <link rel="preconnect" href="//at.alicdn.com">
+    <link rel="preconnect" href="//cdn.staticfile.org">
+    <meta charset="utf-8">
+    {% block title %}
+        <title>快捷社区</title>
+    {% endblock %}
+    {% block link %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'header/css/app.css' %}">
+    <script src="{% static 'header/jquery/1.12.4/jquery.min.js' %}"></script>
+    <script src="{% static 'header/jquery/latest/js.cookie.min.js' %}"></script>
+    <script src="{% static 'header/jquery/assets/app.js' %}"></script>
+</head>
+<body>
+<div id="page" class="not-login">
+    <div class="O">
+        <div class="O-c b b-xc">
+            <div class="O-status-vd"></div>
+            <div class="O-c-Q">
+                <a class="O-j b-L" href="/">
+                    <div class="O-j-R"><img src="https://file.ipadown.com/tophub/assets/images/logo.png"/></div>
+                    快捷社区</a>
+                <div class="I-J">
+                    <div class="I">
+                        <form class="I-form" action="/search" method="get">
+                            <div class="I-n"><i class="m-n">&#xe616;</i></div>
+                            <div class="I-K"><input class="I-K-L b-L" placeholder="搜索内容和节点" autocomplete="off" value=""
+                                                    name="q"></div>
+                        </form>
+                    </div>
+                </div>
+                <a class="bb-T b-L bb-TT" href="/hi"><img src="https://file.ipadown.com/tophub/assets/images/hi.png"
+                                                          width="50"/></a>
+
+                <a class="bb-T b-L" href="/app">App</a>
+
+                <div id="accounts-button" class="S-T b-L">
+                    {% if user.is_authenticated %}
+                        <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}">
+                    {% else %}
+                        <img src="https://file.ipadown.com/tophub/assets/images/noavatar.png" class="account-i"/>
+                    {% endif %}
+                </div>
+
+            </div>
+            <ul class="item-list">
+                <li class="item section">
+                    <div class="title">用户中心</div>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="item">{{ user.first_name }}</li>
+                {% else %}
+{#                    <li class="item"><a href="/accounts/github/login/?process=login">登录</a></li>#}
+                    <li class="item"><a href="{% url 'account_login' %}">登录</a></li>
+                {% endif %}
+                <li class="item"><a href="{% url 'log_out' %}">退出</a></li>
+                <li class="item divider"></li>
+                <li class="item section">
+                    <div class="title">设置选项</div>
+                </li>
+                <li class="item darkmode">
+                    <div class="title">夜间模式</div>
+                    <div class="switch "></div>
+                </li>
+                <li class="item divider"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="tabbar" class="eb b-xc ">
+        <div class="kb-lb-ib">
+            <div class="kb-lb-ib-hb">
+                <div class="kb-lb-ib-c">
+                    <a class="F-gb F-gb-jb" href="/">
+                        <div class="gb-c">首页</div>
+                        <div class="n w-n"></div>
+                    </a>
+                    <a class="F-gb" href="/c/news">
+                        <div class="gb-c">综合</div>
+                        <div class="n sb-n"></div>
+                    </a>
+                    <a class="F-gb" href="/c/tech">
+                        <div class="gb-c">科技</div>
+                        <div class="n x-n"></div>
+                    </a>
+                    <a class="F-gb" href="/c/ent">
+                        <div class="gb-c">娱乐</div>
+                        <div class="n y-n"></div>
+                    </a>
+                    <a class="F-gb" href="/c/shopping">
+                        <div class="gb-c">购物</div>
+                        <div class="n y-n"></div>
+                    </a>
+                    <a class="F-gb" href="/c/community">
+                        <div class="gb-c">社区</div>
+                        <div class="n z-n"></div>
+                    </a>
+                    <div class="kb-lb-ib-pb-qb"></div>
+                </div>
+            </div>
+            <div class="kb-lb-ib-k">
+                <div class="m-n">&#xE408;</div>
+            </div>
+            <div class="kb-lb-ib-l">
+                <div class="m-n">&#xE409;</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% block div %}
+{% endblock %}
+</html>
