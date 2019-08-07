@@ -9,33 +9,42 @@
     {% block title %}
         <title>快捷社区</title>
     {% endblock %}
+    <!-- 导航条 -->
+    <link rel="stylesheet" href="{% static 'header/css/app.css' %}">
+    <!-- hadmin -->
+    <link href="{% static 'hadmin/css/bootstrap.min14ed.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/font-awesome93e3.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/style862f.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/plugins/iCheck/custom.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
+    <link href="{% static 'hadmin/css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
     {% block link %}
     {% endblock %}
-    <link rel="stylesheet" href="{% static 'header/css/app.css' %}">
-    <script src="{% static 'header/jquery/1.12.4/jquery.min.js' %}"></script>
-    <script src="{% static 'header/jquery/latest/js.cookie.min.js' %}"></script>
-    <script src="{% static 'header/jquery/assets/app.js' %}"></script>
 </head>
 <body>
-<div id="page" class="not-login">
+<div>
     <div class="O">
         <div class="O-c b b-xc">
-            <div class="O-status-vd"></div>
             <div class="O-c-Q">
                 <a class="O-j b-L" href="/">
-                    <div class="O-j-R"><img src="https://file.ipadown.com/tophub/assets/images/logo.png"/></div>
+                    <div class="O-j-R">
+                        <img src="https://file.ipadown.com/tophub/assets/images/logo.png"/>
+                    </div>
                     快捷社区</a>
+
                 <div class="I-J">
-                    <div class="I">
-                        <form class="I-form" action="/search" method="get">
-                            <div class="I-n"><i class="m-n">&#xe616;</i></div>
-                            <div class="I-K"><input class="I-K-L b-L" placeholder="搜索内容和节点" autocomplete="off" value=""
-                                                    name="q"></div>
-                        </form>
+                    <div class="I-J">
+                        <div class="input-group m-b"><span class="input-group-btn">
+                                            <button type="button" class="btn btn-success"><i class="fa fa-search"> </i></button> </span>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-                <a class="bb-T b-L bb-TT" href="/hi"><img src="https://file.ipadown.com/tophub/assets/images/hi.png"
-                                                          width="50"/></a>
+
+                <a class="bb-T b-L bb-TT">
+                    <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
+                         width="50"/></a>
 
                 <a class="bb-T b-L" href="/app">App</a>
 
@@ -55,10 +64,12 @@
                 {% if user.is_authenticated %}
                     <li class="item">{{ user.first_name }}</li>
                 {% else %}
-{#                    <li class="item"><a href="/accounts/github/login/?process=login">登录</a></li>#}
-                    <li class="item"><a href="{% url 'account_login' %}">登录</a></li>
+                    <li class="item"><a href="{% url 'account_login' %}">登录</a>
+                    </li>
                 {% endif %}
-                <li class="item"><a href="{% url 'log_out' %}">退出</a></li>
+                {% if ser.is_authenticated %}
+                    <li class="item"><a href="{% url 'log_out' %}">退出</a></li>
+                {% endif %}
                 <li class="item divider"></li>
                 <li class="item section">
                     <div class="title">设置选项</div>
@@ -79,39 +90,57 @@
                         <div class="gb-c">首页</div>
                         <div class="n w-n"></div>
                     </a>
-                    <a class="F-gb" href="/c/news">
+                    <a class="F-gb" href="">
                         <div class="gb-c">综合</div>
                         <div class="n sb-n"></div>
                     </a>
-                    <a class="F-gb" href="/c/tech">
+                    <a class="F-gb" href="">
                         <div class="gb-c">科技</div>
                         <div class="n x-n"></div>
                     </a>
-                    <a class="F-gb" href="/c/ent">
+                    <a class="F-gb" href="">
                         <div class="gb-c">娱乐</div>
                         <div class="n y-n"></div>
                     </a>
-                    <a class="F-gb" href="/c/shopping">
-                        <div class="gb-c">购物</div>
+                    <a class="F-gb" href="">
+                        <div class="gb-c">编程</div>
                         <div class="n y-n"></div>
                     </a>
-                    <a class="F-gb" href="/c/community">
+                    <a class="F-gb" href="">
                         <div class="gb-c">社区</div>
                         <div class="n z-n"></div>
                     </a>
                     <div class="kb-lb-ib-pb-qb"></div>
                 </div>
             </div>
-            <div class="kb-lb-ib-k">
-                <div class="m-n">&#xE408;</div>
-            </div>
-            <div class="kb-lb-ib-l">
-                <div class="m-n">&#xE409;</div>
-            </div>
         </div>
     </div>
+    <div class="eb-fb">
+    </div>
+    <div class="c-d c-d-e">
+        {% block div %}
+        {% endblock %}
+    </div>
 </div>
+
 </body>
-{% block div %}
+<script src="{% static 'header/jquery/1.12.4/jquery.min.js' %}"></script>
+<script src="{% static 'header/jquery/latest/js.cookie.min.js' %}"></script>
+<script src="{% static 'header/jquery/assets/app.js' %}"></script>
+
+<!-- 全局js -->
+<script src="{% static 'hadmin/js/jquery.min63b9.js' %}"></script>
+<script src="{% static 'hadmin/js/bootstrap.min14ed.js' %}"></script>
+<!-- 自定义js -->
+<script src="{% static 'hadmin/js/contente209.js' %}"></script>
+<script src="{% static 'hadmin/js/plugins/toastr/toastr.min.js' %}"></script>
+<!-- Steps -->
+<script src="{% static 'hadmin/js/plugins/staps/jquery.steps.min.js' %}"></script>
+<!-- Jquery Validate -->
+<script src="{% static 'hadmin/js/plugins/validate/jquery.validate.min.js' %}"></script>
+<script src="{% static 'hadmin/js/plugins/validate/messages_zh.min.js' %}"></script>
+<script>
+</script>
+{% block script %}
 {% endblock %}
 </html>

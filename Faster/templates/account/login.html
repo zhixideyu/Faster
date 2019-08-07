@@ -4,68 +4,192 @@
 {% block title %}登录{% endblock %}
 
 {% block div %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <br>
-            {% get_providers as socialaccount_providers %}
-            {% if socialaccount_providers %}
-            <p>
-                {% blocktrans with site.name as site_name %}请登录已有本地账号或<a href="{{ signup_url }}">注册</a>新账号。
-                也可以通过第三方登录:{% endblocktrans %}
-            </p>
+    <div class="col-sm-12">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a aria-expanded="true" href="#tab-1" data-toggle="tab">第一个选项卡</a>
+                </li>
+                <li><a aria-expanded="false" href="#tab-2" data-toggle="tab">第二个选项卡</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="tab-1">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <form id="form" action="" class="wizard-big">
+                                <h1>账户</h1>
+                                <fieldset>
+                                    <h2>账户信息</h2>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label>用户名 *</label>
+                                                <input id="userName" name="userName" type="text"
+                                                       class="form-control required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>密码 *</label>
+                                                <input id="password" name="password" type="text"
+                                                       class="form-control required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>确认密码 *</label>
+                                                <input id="confirm" name="confirm" type="text"
+                                                       class="form-control required">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="text-center">
+                                                <div style="margin-top: 20px">
+                                                    <i class="fa fa-sign-in"
+                                                       style="font-size: 180px;color: #e5e5e5 "></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <div class="socialaccount_ballot">
-                <h5 class="mb-2 mt-4">第三方登录：</h5>
-                <ul class="socialaccount_providers">
-                  {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                </ul>
-                <h5 class="mb-2 mt-4">本地登录：</h5>
-            </div>
+                                </fieldset>
+                                <h1>个人资料</h1>
+                                <fieldset>
+                                    <h2>个人资料信息</h2>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>姓名 *</label>
+                                                <input id="name" name="name" type="text"
+                                                       class="form-control required">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Email *</label>
+                                                <input id="email" name="email" type="text"
+                                                       class="form-control required email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>地址 *</label>
+                                                <input id="address" name="address" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
 
-            {% include "socialaccount/snippets/login_extra.html" %}
+                                <h1>警告</h1>
+                                <fieldset>
+                                    <div class="text-center" style="margin-top: 120px">
+                                        <h2>你是火星人 :-)</h2>
+                                    </div>
+                                </fieldset>
 
-            {% else %}
-            <p>{% blocktrans %}If you have not created an account yet, then please
-            <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-            {% endif %}
-            <div class="col-6">
-                <form class="login" id="login_form" method="POST" action="{% url 'account_login' %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="id_login">账号: </label>
-                        <input type="text" name="login" placeholder="请输入用户名或Email" autofocus="autofocus" required
-                            id="id_login" class="form-control" />
-                        <small class="form-text text-muted ml-1">
-                            还没有账号？
-                            <a href="{% url 'account_signup' %}" style="color: cornflowerblue; ">
-                                注册新账号
-                            </a>
-                        </small>
+                                <h1>完成</h1>
+                                <fieldset>
+                                    <h2>条款</h2>
+                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                                    <label for="acceptTerms">我同意注册条款</label>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-group mb-1">
-                        <label for="id_password">
-                            密码:
-                        </label>
-                        <input type="password" name="password" placeholder="请输入密码" required id="id_password"
-                            class="form-control" />
-                        <small class="form-text text-muted ml-1">
-                            <a class="secondaryAction layui-text" href="{% url 'account_reset_password' %}">
-                                忘记密码?
-                            </a>
-                        </small>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">用户名：</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" placeholder="用户名" class="form-control">
+                                        <span class="help-block m-b-none">请输入您注册时所填的E-mail</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">密码：</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" placeholder="密码" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-8">
+                                        <button class="btn btn-sm btn-info" type="submit">登 录</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" name="remember" id="id_remember" checked class="custom-control-input" />
-                        <label for="id_remember" class="custom-control-label">
-                            保持登录
-                        </label>
-                    </div>
-                    <button class="primaryAction btn btn-primary" type="submit" hidden id="submit_login">确认</button>
-                    <button class="primaryAction btn btn-primary" type="button" id="on_submit_login">确认</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex) {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex) {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18) {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex) {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3) {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                errorPlacement: function (error, element) {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+        });
+    </script>
 {% endblock %}
