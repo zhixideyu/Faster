@@ -1,7 +1,23 @@
 from django.db import models
 from datetime import datetime
 from user.models import UserProfile
+from ckeditor.fields import RichTextField
+from django.db.models.fields import DateTimeField
+
+from django.db.models.fields.related import ManyToManyField
 # Create your models here.
+
+
+class ArticleClass(models.Model):
+    name = models.CharField(null=True, max_length=50, verbose_name='分类名')
+
+    class Meta:
+        db_table = 'article_class'
+        verbose_name = '文章分类'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
 
 
 class ArticleType(models.Model):
@@ -9,12 +25,33 @@ class ArticleType(models.Model):
 
     class Meta:
         db_table = 'article_type'
+        verbose_name = '文章标签'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
 
 
 class Article(models.Model):
+
+    def to_dict(self, fields=None, exclude=None):
+        data = {}
+        for f in self._meta.concrete_fields + self._meta.many_to_many:
+            value = f.value_from_object(self)
+            if fields and f.name not in fields:
+                continue
+            if exclude and f.name in exclude:
+                continue
+            if isinstance(f, ManyToManyField):
+                value = [i.id for i in value] if self.pk else None
+            if isinstance(f, DateTimeField):
+                value = value.strftime('%Y-%m-%d %H:%M:%S') if value else None
+            data[f.name] = value
+        return data
+
     """ 文章 """
     title = models.CharField(max_length=50, null=True, verbose_name='标题')
-    content = models.TextField(verbose_name='内容')
+    content = RichTextField(verbose_name='内容')
     publish_time = models.DateTimeField(default=datetime.now, null=True, verbose_name='发布时间')
     update_time = models.DateTimeField(default=datetime.now, null=True, verbose_name='更新时间')
     comment_num = models.IntegerField(null=False, default=0, verbose_name='评论数')
@@ -23,8 +60,10 @@ class Article(models.Model):
     browse_num = models.IntegerField(null=False, default=0, verbose_name='浏览数')
     article_type = models.IntegerField(null=True)
     author = models.IntegerField(null=True)
-    article_type = models.ForeignKey(ArticleType, on_delete=models.CASCADE, verbose_name='文章标签')
+    article_class = models.IntegerField(null=True)
+    article_type = models.ManyToManyField(ArticleType, verbose_name='文章标签')
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='作者')
+    article_class = models.ForeignKey(ArticleClass, on_delete=models.CASCADE, verbose_name='文章分类')
 
     class Meta:
         db_table = 'article'

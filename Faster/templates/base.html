@@ -19,28 +19,22 @@
     <link href="{% static 'hadmin/css/plugins/iCheck/custom.css' %}" rel="stylesheet">
     <link href="{% static 'hadmin/css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
     <link href="{% static 'hadmin/css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
+    <!-- monikai -->
+    <link href="{% static 'md_css/monokai.css' %}" rel="stylesheet">
     {% block link %}
     {% endblock %}
 </head>
 <body>
 <div>
     <div class="O">
-        <div class="O-c b b-xc">
+        <div class="O-c b-xc">
             <div class="O-c-Q">
                 <a class="O-j b-L" href="/">
                     <div class="O-j-R">
                         <img src="https://file.ipadown.com/tophub/assets/images/logo.png"/>
                     </div>
                     快捷社区</a>
-
-                <div class="I-J">
-                    <div class="I-J">
-                        <div class="input-group m-b"><span class="input-group-btn">
-                                            <button type="button" class="btn btn-success"><i class="fa fa-search"> </i></button> </span>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
+             </div>
 
                 <a class="bb-T b-L bb-TT">
                     <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
@@ -48,7 +42,7 @@
 
                 <a class="bb-T b-L" href="/app">App</a>
 
-                <div id="accounts-button" class="S-T b-L">
+                <div id="accounts-button" class="S-T b-L fa-spin">
                     {% if user.is_authenticated %}
                         <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}">
                     {% else %}
@@ -62,13 +56,16 @@
                     <div class="title">用户中心</div>
                 </li>
                 {% if user.is_authenticated %}
-                    <li class="item">{{ user.first_name }}</li>
+                    <li class="item">{{ user.username }}({{ user.first_name }})</li>
                 {% else %}
-                    <li class="item"><a href="{% url 'account_login' %}">登录</a>
+                    <li class="item"><a href="/accounts/github/login/?process=login">
+                        <i class="account-i fa fa-github" style="color: darksalmon" aria-hidden="true"></i> 使用Git登录
+                    </a></li>
+                    <li class="item"><a href="{% url 'account_login' %}"><i class="fa fa-circle-o-notch" style="color: darksalmon"></i> 本地登录</a>
                     </li>
                 {% endif %}
-                {% if ser.is_authenticated %}
-                    <li class="item"><a href="{% url 'log_out' %}">退出</a></li>
+                {% if user.is_authenticated %}
+                    <li class="item"><a href="{% url 'log_out' %}"><i class="fa fa-power-off"></i>退出</a></li>
                 {% endif %}
                 <li class="item divider"></li>
                 <li class="item section">
@@ -90,7 +87,7 @@
                         <div class="gb-c">首页</div>
                         <div class="n w-n"></div>
                     </a>
-                    <a class="F-gb" href="">
+                    <a class="F-gb" href="{% url 'gather' %}">
                         <div class="gb-c">综合</div>
                         <div class="n sb-n"></div>
                     </a>
@@ -98,7 +95,7 @@
                         <div class="gb-c">科技</div>
                         <div class="n x-n"></div>
                     </a>
-                    <a class="F-gb" href="">
+                    <a class="F-gb" href="{% url 'recreation' %}">
                         <div class="gb-c">娱乐</div>
                         <div class="n y-n"></div>
                     </a>
@@ -139,8 +136,11 @@
 <!-- Jquery Validate -->
 <script src="{% static 'hadmin/js/plugins/validate/jquery.validate.min.js' %}"></script>
 <script src="{% static 'hadmin/js/plugins/validate/messages_zh.min.js' %}"></script>
-<script>
-</script>
+<!-- Rickshaw -->
+<script src="{% static 'hadmin/js/plugins/rickshaw/vendor/d3.v3.js' %}"></script>
+<script src="{% static 'hadmin/js/plugins/rickshaw/rickshaw.min.js' %}"></script>
+<!-- Peity -->
+<script src="{% static 'hadmin/js/plugins/peity/jquery.peity.min.js' %}"></script>
 {% block script %}
 {% endblock %}
 </html>

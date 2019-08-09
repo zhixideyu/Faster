@@ -4,17 +4,21 @@
 {% block title %}登录{% endblock %}
 
 {% block div %}
-    <div class="col-sm-12">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
         <div class="tabs-container">
             <ul class="nav nav-tabs">
-                <li class="active"><a aria-expanded="true" href="#tab-1" data-toggle="tab">第一个选项卡</a>
+                <li class="active"><a aria-expanded="true" href="#tab-1" data-toggle="tab">注册账户</a>
                 </li>
-                <li><a aria-expanded="false" href="#tab-2" data-toggle="tab">第二个选项卡</a>
+                <li><a aria-expanded="false" href="#tab-2" data-toggle="tab">登录账号</a>
+                </li>
+                <li><a aria-expanded="false" href="#tab-3" data-toggle="tab">第三方登录</a>
                 </li>
             </ul>
-            <div class="tab-content">
-                <div class="tab-pane" id="tab-1">
-                    <div class="ibox">
+            <div class="tab-content ">
+                <div class="tab-pane active" id="tab-1">
+                    <div class="ibox" >
                         <div class="ibox-content">
                             <form id="form" action="" class="wizard-big">
                                 <h1>账户</h1>
@@ -117,12 +121,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="tab-pane" id="tab-3"></div>
             </div>
         </div>
     </div>
+    <div class="col-sm-2">
+    </div>
+
+
 {% endblock %}
 {% block script %}
     <script>
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "progressBar": true,
+          "positionClass": "toast-bottom-right",
+          "showDuration": "5000",
+          "hideDuration": "5000",
+          "timeOut": "5000",
+          "extendedTimeOut": "5000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        };
+        toastr['info']("这里你可以选择注册账号或者进行第三方登录！", "Hi, 欢迎登录快捷社区");
         $(document).ready(function () {
             $("#wizard").steps();
             $("#form").steps({

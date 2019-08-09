@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block div %}
+    <div class="animated fadeInRight article">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-1">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <div class="text-center article-title">
+                            <h1 id="title">
+                            </h1>
+                        </div>
+                        <p><span id="content"></span></p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>评论：</h2>
+                                <div class="social-feed-box">
+                                    <div class="social-avatar">
+                                        <a href="#" class="pull-left">
+                                            <img alt="image" src="">
+                                        </a>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                逆光狂胜蔡舞娘
+                                            </a>
+                                            <small class="text-muted">17 小时前</small>
+                                        </div>
+                                    </div>
+                                    <div class="social-body">
+                                        <p>
+                                            好东西，我朝淘宝准备跟进，1折开卖
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            function refresh() {
+                $.getJSON('{% url "detail_api" %}', function (ret) {
+                    $('#title').html(ret.title);
+                    $('#content').html(ret.content);
+                })
+
+            }
+            Window.clearInterva(refresh)
+        })
+    </script>
+{% endblock %}
