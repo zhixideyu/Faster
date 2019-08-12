@@ -7,7 +7,7 @@ fake = Faker()
 
 
 class UserProfile(AbstractUser):
-    nick_name = models.CharField(max_length=20, verbose_name='昵称', default='虚拟-{}'.format(fake.name()))
+    nick_name = models.CharField(max_length=255, verbose_name='昵称', default='虚拟-{}'.format(fake.name()))
     birthday = models.DateTimeField(verbose_name='生日', null=True, blank=True, default='{}'.format(fake.simple_profile()['birthdate']))
     address = models.CharField(max_length=50, verbose_name='住址')
     mobile = models.CharField(max_length=11, verbose_name='手机号', null=True, blank=True)

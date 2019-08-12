@@ -9,6 +9,8 @@
     {% block title %}
         <title>快捷社区</title>
     {% endblock %}
+    <!-- monikai -->
+    <link href="{% static 'highlights/trac.css' %}" rel="stylesheet">
     <!-- 导航条 -->
     <link rel="stylesheet" href="{% static 'header/css/app.css' %}">
     <!-- hadmin -->
@@ -19,8 +21,6 @@
     <link href="{% static 'hadmin/css/plugins/iCheck/custom.css' %}" rel="stylesheet">
     <link href="{% static 'hadmin/css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
     <link href="{% static 'hadmin/css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
-    <!-- monikai -->
-    <link href="{% static 'md_css/monokai.css' %}" rel="stylesheet">
     {% block link %}
     {% endblock %}
 </head>
@@ -42,7 +42,7 @@
 
                 <a class="bb-T b-L" href="/app">App</a>
 
-                <div id="accounts-button" class="S-T b-L fa-spin">
+                <div id="accounts-button" class="S-T b-L">
                     {% if user.is_authenticated %}
                         <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}">
                     {% else %}
@@ -58,7 +58,7 @@
                 {% if user.is_authenticated %}
                     <li class="item">{{ user.username }}({{ user.first_name }})</li>
                 {% else %}
-                    <li class="item"><a href="/accounts/github/login/?process=login">
+                    <li class="item"><a href="/accounts/baidu/login/?process=login">
                         <i class="account-i fa fa-github" style="color: darksalmon" aria-hidden="true"></i> 使用Git登录
                     </a></li>
                     <li class="item"><a href="{% url 'account_login' %}"><i class="fa fa-circle-o-notch" style="color: darksalmon"></i> 本地登录</a>
@@ -141,6 +141,7 @@
 <script src="{% static 'hadmin/js/plugins/rickshaw/rickshaw.min.js' %}"></script>
 <!-- Peity -->
 <script src="{% static 'hadmin/js/plugins/peity/jquery.peity.min.js' %}"></script>
+<!-- Vue-->
 {% block script %}
 {% endblock %}
 </html>

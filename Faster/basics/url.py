@@ -2,5 +2,5 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^detail_api/', detail_api, name='detail_api'),
+    url(r'^detail/(?P<article_id>\w+)', ArticleDetailView.as_view(), name='detail'),
 ]

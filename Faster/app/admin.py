@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, ArticleType, ArticleClass
+from .models import Article, ArticleType, ArticleCategory
 # Register your models here.
 
 
@@ -21,10 +21,10 @@ class ArticleTypeAdmin(admin.ModelAdmin):
 admin.site.register(ArticleType, ArticleTypeAdmin)
 
 
-class ArticleClassAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name']
+class ArticleCategoryAdmin(admin.ModelAdmin):
+    list_display = ['name']
     list_filter = ['name']
     search_fields = ['name']
 
 
-admin.site.register(ArticleClass, ArticleClassAdmin)
+admin.site.register(ArticleCategory, ArticleCategoryAdmin)
