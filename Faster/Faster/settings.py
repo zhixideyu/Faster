@@ -25,7 +25,7 @@ SECRET_KEY = 's43kz99hrvlrevahwnnw5oa5qu6l0js9zmpc3_!@4yaz5ck3ec'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'user.UserProfile'
 # Application definition
@@ -147,9 +147,11 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -176,3 +178,4 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': ','.join(['codesnippet']),
     }
 }
+

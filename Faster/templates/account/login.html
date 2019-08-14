@@ -18,7 +18,7 @@
             </ul>
             <div class="tab-content ">
                 <div class="tab-pane active" id="tab-1">
-                    <div class="ibox" >
+                    <div class="ibox">
                         <div class="ibox-content">
                             <form id="form" action="" class="wizard-big">
                                 <h1>账户</h1>
@@ -121,7 +121,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="tab-3"></div>
+                <div class="tab-pane" id="tab-3">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <a href="/accounts/github/login/?process=login">
+                        <button class="btn btn-info  dim btn-large-dim btn-outline" type="button"><i
+                                class="fa fa-github"></i>
+                        </button></a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -133,18 +142,18 @@
 {% block script %}
     <script>
         toastr.options = {
-          "closeButton": true,
-          "debug": false,
-          "progressBar": true,
-          "positionClass": "toast-bottom-right",
-          "showDuration": "5000",
-          "hideDuration": "5000",
-          "timeOut": "5000",
-          "extendedTimeOut": "5000",
-          "showEasing": "swing",
-          "hideEasing": "linear",
-          "showMethod": "fadeIn",
-          "hideMethod": "fadeOut"
+            "closeButton": true,
+            "debug": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-right",
+            "showDuration": "5000",
+            "hideDuration": "5000",
+            "timeOut": "5000",
+            "extendedTimeOut": "5000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
         };
         toastr['info']("这里你可以选择注册账号或者进行第三方登录！", "Hi, 欢迎登录快捷社区");
         $(document).ready(function () {

@@ -14,12 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from app.feeds import AllArticleRssFeed
 from django.contrib import admin
+from django.views.static import serve
+from . import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^user/', include('user.url')),
     url(r'^article/', include('basics.url')),
+    url(r'^feed/$', AllArticleRssFeed(), name='feed'),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
     url(r'^', include('app.url')),
 ]

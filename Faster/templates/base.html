@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,15 +12,15 @@
     <!-- monikai -->
     <link href="{% static 'highlights/trac.css' %}" rel="stylesheet">
     <!-- 导航条 -->
-    <link rel="stylesheet" href="{% static 'header/css/app.css' %}">
+    <link rel="stylesheet" href="{% static '/header/css/app.css' %}">
     <!-- hadmin -->
-    <link href="{% static 'hadmin/css/bootstrap.min14ed.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/font-awesome93e3.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/animate.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/style862f.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/plugins/iCheck/custom.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
-    <link href="{% static 'hadmin/css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/bootstrap.min14ed.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/font-awesome93e3.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/style862f.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/plugins/iCheck/custom.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
+    <link href="{% static '/hadmin/css/plugins/toastr/toastr.min.css' %}" rel="stylesheet">
     {% block link %}
     {% endblock %}
 </head>
@@ -34,113 +34,121 @@
                         <img src="https://file.ipadown.com/tophub/assets/images/logo.png"/>
                     </div>
                     快捷社区</a>
-             </div>
+            </div>
 
-                <a class="bb-T b-L bb-TT">
-                    <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
-                         width="50"/></a>
+            {#            <a class="bb-T b-L bb-TT">#}
+            <a class="rss bb-T b-L" href="{% url 'feed' %}" target="_blank">
+                <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
+                     width="50"/></a>
 
-                <a class="bb-T b-L" href="/app">App</a>
-
-                <div id="accounts-button" class="S-T b-L">
-                    {% if user.is_authenticated %}
-                        <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}">
+            {#            <div class="rss bb-T b-L">#}
+            {#                <a href="{% url 'feed' %}" target="_blank"><img src="https://file.ipadown.com/tophub/assets/images/hi.png"#}
+            {#                     width="50"/></a></a>#}
+            {#            </div>#}
+            <div id="accounts-button" class="S-T b-L">
+                {% if user.is_authenticated %}
+                    {% if user.is_superuser %}
+                        <img src="{% static 'image/head/super_user.png' %}">
                     {% else %}
-                        <img src="https://file.ipadown.com/tophub/assets/images/noavatar.png" class="account-i"/>
+                        <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}">
                     {% endif %}
-                </div>
-
-            </div>
-            <ul class="item-list">
-                <li class="item section">
-                    <div class="title">用户中心</div>
-                </li>
-                {% if user.is_authenticated %}
-                    <li class="item">{{ user.username }}({{ user.first_name }})</li>
                 {% else %}
-                    <li class="item"><a href="/accounts/baidu/login/?process=login">
-                        <i class="account-i fa fa-github" style="color: darksalmon" aria-hidden="true"></i> 使用Git登录
-                    </a></li>
-                    <li class="item"><a href="{% url 'account_login' %}"><i class="fa fa-circle-o-notch" style="color: darksalmon"></i> 本地登录</a>
-                    </li>
+                    <img src="https://file.ipadown.com/tophub/assets/images/noavatar.png" class="account-i"/>
                 {% endif %}
-                {% if user.is_authenticated %}
-                    <li class="item"><a href="{% url 'log_out' %}"><i class="fa fa-power-off"></i>退出</a></li>
-                {% endif %}
-                <li class="item divider"></li>
-                <li class="item section">
-                    <div class="title">设置选项</div>
-                </li>
-                <li class="item darkmode">
-                    <div class="title">夜间模式</div>
-                    <div class="switch "></div>
-                </li>
-                <li class="item divider"></li>
-            </ul>
+            </div>
         </div>
+        <ul class="item-list">
+            <li class="item section">
+                <div class="title">用户中心</div>
+            </li>
+            {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                    <li class="item">{{ user.username }}(管理员)</li>
+                {% else %}
+                    <li class="item">{{ user.username }}({{ user.first_name }})</li>
+                {% endif %}
+            {% else %}
+                <li class="item"><a href="{% url 'account_login' %}"><i class="fa fa-circle-o-notch"
+                                                                        style="color: darksalmon"></i> 本地登录</a>
+                </li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <li class="item"><a href="{% url 'log_out' %}">退出</a></li>
+            {% endif %}
+            <li class="item divider"></li>
+            <li class="item section">
+                <div class="title">设置选项</div>
+            </li>
+            <li class="item darkmode" id="switch">
+                    <div class="title">夜间模式</div>
+                    <div class="switch"></div>
+            </li>
+            <li class="item divider"></li>
+        </ul>
     </div>
-    <div id="tabbar" class="eb b-xc ">
-        <div class="kb-lb-ib">
-            <div class="kb-lb-ib-hb">
-                <div class="kb-lb-ib-c">
-                    <a class="F-gb F-gb-jb" href="/">
-                        <div class="gb-c">首页</div>
-                        <div class="n w-n"></div>
-                    </a>
-                    <a class="F-gb" href="{% url 'gather' %}">
-                        <div class="gb-c">综合</div>
-                        <div class="n sb-n"></div>
-                    </a>
-                    <a class="F-gb" href="">
-                        <div class="gb-c">科技</div>
-                        <div class="n x-n"></div>
-                    </a>
-                    <a class="F-gb" href="{% url 'recreation' %}">
-                        <div class="gb-c">娱乐</div>
-                        <div class="n y-n"></div>
-                    </a>
-                    <a class="F-gb" href="">
-                        <div class="gb-c">编程</div>
-                        <div class="n y-n"></div>
-                    </a>
-                    <a class="F-gb" href="">
-                        <div class="gb-c">社区</div>
-                        <div class="n z-n"></div>
-                    </a>
-                    <div class="kb-lb-ib-pb-qb"></div>
-                </div>
+</div>
+<div id="tabbar" class="eb b-xc ">
+    <div class="kb-lb-ib">
+        <div class="kb-lb-ib-hb">
+            <div class="kb-lb-ib-c">
+                <a class="F-gb F-gb-jb" href="/">
+                    <div class="gb-c">首页</div>
+                    <div class="n w-n"></div>
+                </a>
+                <a class="F-gb" href="{% url 'gather' %}">
+                    <div class="gb-c">综合</div>
+                    <div class="n sb-n"></div>
+                </a>
+                <a class="F-gb" href="">
+                    <div class="gb-c">科技</div>
+                    <div class="n x-n"></div>
+                </a>
+                <a class="F-gb" href="{% url 'recreation' %}">
+                    <div class="gb-c">娱乐</div>
+                    <div class="n y-n"></div>
+                </a>
+                <a class="F-gb" href="">
+                    <div class="gb-c">编程</div>
+                    <div class="n y-n"></div>
+                </a>
+                <a class="F-gb" href="">
+                    <div class="gb-c">社区</div>
+                    <div class="n z-n"></div>
+                </a>
+                <div class="kb-lb-ib-pb-qb"></div>
             </div>
         </div>
     </div>
-    <div class="eb-fb">
-    </div>
-    <div class="c-d c-d-e">
-        {% block div %}
-        {% endblock %}
-    </div>
+</div>
+<div class="eb-fb">
+</div>
+<div class="c-d c-d-e">
+    {% block div %}
+    {% endblock %}
+</div>
 </div>
 
 </body>
-<script src="{% static 'header/jquery/1.12.4/jquery.min.js' %}"></script>
-<script src="{% static 'header/jquery/latest/js.cookie.min.js' %}"></script>
-<script src="{% static 'header/jquery/assets/app.js' %}"></script>
+<script src="{% static '/header/jquery/1.12.4/jquery.min.js' %}"></script>
+<script src="{% static '/header/jquery/latest/js.cookie.min.js' %}"></script>
+<script src="{% static '/header/jquery/assets/app.js' %}"></script>
 
 <!-- 全局js -->
-<script src="{% static 'hadmin/js/jquery.min63b9.js' %}"></script>
-<script src="{% static 'hadmin/js/bootstrap.min14ed.js' %}"></script>
+<script src="{% static '/hadmin/js/jquery.min63b9.js' %}"></script>
+<script src="{% static '/hadmin/js/bootstrap.min14ed.js' %}"></script>
 <!-- 自定义js -->
-<script src="{% static 'hadmin/js/contente209.js' %}"></script>
-<script src="{% static 'hadmin/js/plugins/toastr/toastr.min.js' %}"></script>
+<script src="{% static '/hadmin/js/contente209.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/toastr/toastr.min.js' %}"></script>
 <!-- Steps -->
-<script src="{% static 'hadmin/js/plugins/staps/jquery.steps.min.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/staps/jquery.steps.min.js' %}"></script>
 <!-- Jquery Validate -->
-<script src="{% static 'hadmin/js/plugins/validate/jquery.validate.min.js' %}"></script>
-<script src="{% static 'hadmin/js/plugins/validate/messages_zh.min.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/validate/jquery.validate.min.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/validate/messages_zh.min.js' %}"></script>
 <!-- Rickshaw -->
-<script src="{% static 'hadmin/js/plugins/rickshaw/vendor/d3.v3.js' %}"></script>
-<script src="{% static 'hadmin/js/plugins/rickshaw/rickshaw.min.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/rickshaw/vendor/d3.v3.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/rickshaw/rickshaw.min.js' %}"></script>
 <!-- Peity -->
-<script src="{% static 'hadmin/js/plugins/peity/jquery.peity.min.js' %}"></script>
+<script src="{% static '/hadmin/js/plugins/peity/jquery.peity.min.js' %}"></script>
 <!-- Vue-->
 {% block script %}
 {% endblock %}

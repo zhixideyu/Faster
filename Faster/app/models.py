@@ -21,9 +21,6 @@ class ArticleCategory(models.Model):
         verbose_name = '文章分类'
         verbose_name_plural = verbose_name
 
-    def get_absolute_url(self):
-        return reverse('', kwargs={'': self})
-
     def __str__(self):
         return self.name
 
@@ -41,6 +38,7 @@ class ArticleType(models.Model):
 
 
 class Article(models.Model):
+    """ 文章 """
 
     STATUS_CHOICES = (
         ('d', '草稿'),
@@ -96,14 +94,20 @@ class Article(models.Model):
         """ __lt 小于 上一篇文章 """
         return Article.objects.filter(id__lt=self.id, status='p').first()
 
+    def get_absolute_url(self):
+
+        return reverse('detail', kwargs={
+            'article_id': self.id
+        })
+
 
 class Comment(models.Model):
+    """ 评论 """
+
     content = models.CharField(null=True, max_length=255)
     date = models.DateTimeField(null=True, default=datetime.now)
-    article = models.IntegerField(null=True)
-    user = models.IntegerField(null=True)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, blank=False, null=False)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, blank=False, null=False)
 
     class Meta:
         db_table = 'comment'
@@ -112,10 +116,8 @@ class Comment(models.Model):
 
 
 class Keep(models.Model):
-    article = models.IntegerField(null=True)
-    user = models.IntegerField(null=True)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, blank=False, null=False)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, blank=False, null=False)
 
     class Meta:
         db_table = 'keep'
@@ -124,10 +126,8 @@ class Keep(models.Model):
 
 
 class Pool(models.Model):
-    article = models.IntegerField(null=True)
-    user = models.IntegerField(null=True)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, blank=False, null=False)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, blank=False, null=False)
 
     class Meta:
         db_table = 'pool'
