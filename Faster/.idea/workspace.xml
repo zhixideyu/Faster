@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="718f865d-870e-47a4-b633-e63e8ca9caf8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Faster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Faster.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Faster/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Faster/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Faster/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Faster/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Faster/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Faster/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templatetags/tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basics/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/bootstrap.min14ed.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/bootstrap.min14ed.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/font-awesome.min93e3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/font-awesome.min93e3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/font-awesome93e3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/font-awesome93e3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/plugins/summernote/summernote-bs3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/plugins/summernote/summernote-bs3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/css/style862f.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/style862f.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfont93e3.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfont93e3.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfont93e3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfont93e3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfont93e3.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfont93e3.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfont93e3.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfont93e3.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfont93e3.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfont93e3.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/fontawesome-webfontd41d.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/hadmin/fonts/glyphicons-halflings-regulard41d.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/hadmin/css/fonts/glyphicons-halflings-regulard41d.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/article_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,12 +34,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basics/models.py">
+        <entry file="file://$PROJECT_DIR$/basics/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="-351">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/header/jquery/0.8.7/jquery.nanoscroller.min.js" />
-        <option value="$PROJECT_DIR$/static/header/jquery/2.1.15/jquery.webui-popover.min.js" />
         <option value="$PROJECT_DIR$/static/header/jquery/latest/js.cookie.min.js" />
         <option value="$PROJECT_DIR$/static/header/jquery/assets/app.js" />
         <option value="$PROJECT_DIR$/static/body/css/pc.9f7f14b3.css" />
@@ -153,7 +123,6 @@
         <option value="$PROJECT_DIR$/basics/templates/article.html" />
         <option value="C:/tools/Python/Python35-32/Lib/site-packages/django/views/generic/detail.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/static/pygments/code.css" />
         <option value="$PROJECT_DIR$/basics/views.py" />
         <option value="$PROJECT_DIR$/templates/blog/article_detail.html" />
@@ -163,20 +132,23 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/settings.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/urls.py" />
         <option value="$PROJECT_DIR$/Faster/__init__.py" />
-        <option value="$PROJECT_DIR$/Faster/urls.py" />
         <option value="$PROJECT_DIR$/static/__init__.py" />
         <option value="$PROJECT_DIR$/static/hadmin/css/style862f.css" />
         <option value="$PROJECT_DIR$/basics/url.py" />
         <option value="$PROJECT_DIR$/Faster/utils.py" />
-        <option value="$PROJECT_DIR$/app/feeds.py" />
         <option value="$PROJECT_DIR$/Faster/settings.py" />
         <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/django_nginx.conf" />
         <option value="$PROJECT_DIR$/templates/account/login.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/feeds.py" />
+        <option value="$PROJECT_DIR$/basics/feeds.py" />
+        <option value="$PROJECT_DIR$/Faster/urls.py" />
         <option value="$PROJECT_DIR$/basics/models.py" />
+        <option value="$PROJECT_DIR$/basics/admin.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
@@ -193,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="949" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
@@ -222,6 +194,16 @@
               <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
               <item name="Faster" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,7 +351,7 @@
       <workItem from="1565254510051" duration="12985000" />
       <workItem from="1565324519727" duration="18593000" />
       <workItem from="1565431589302" duration="13901000" />
-      <workItem from="1565506934503" duration="68157000" />
+      <workItem from="1565506934503" duration="79157000" />
     </task>
     <servers />
   </component>
@@ -382,7 +364,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197314000" />
+    <option name="totallyTimeSpent" value="208314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,10 +376,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="633" y="0" width="653" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.42689076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14551334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" weight="0.348135" />
@@ -408,7 +390,7 @@
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.5275311" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.3321492" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50282943" side_tool="true" weight="0.41207814" />
-      <window_info active="true" anchor="bottom" id="manage.py@Faster" order="7" visible="true" weight="0.075675674" />
+      <window_info anchor="bottom" id="manage.py@Faster" order="7" weight="0.37300178" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.47207206" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3981982" />
@@ -462,27 +444,6 @@
     <SUITE FILE_PATH="coverage/Faster$models.coverage" NAME="models Coverage Results" MODIFIED="1565148863958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/user" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/tools/Python/Python35-32/Lib/site-packages/django/urls/resolvers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="496" selection-start-line="496" selection-end-line="496" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/tools/Python/Python35-32/Lib/site-packages/django/db/models/fields/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2069" column="6" selection-start-line="2069" selection-start-column="6" selection-end-line="2069" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-609890296/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="5209" column="8" selection-start-line="5209" selection-start-column="8" selection-end-line="5209" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/tools/Python/Python35-32/Lib/site-packages/django/views/generic/detail.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -501,16 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="223" selection-start-line="223" selection-end-line="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -52093,16 +52044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4509">
@@ -52187,41 +52128,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basics/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Faster/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#640#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/allauth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-243">
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/feeds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -52279,65 +52190,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/contrib/syndication/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="149" column="14" lean-forward="true" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+        <state relative-caret-position="-1782">
           <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
+    <entry file="file://$PROJECT_DIR$/basics/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="11" column="9" selection-start-line="11" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+        <state relative-caret-position="159">
+          <caret line="66" column="28" selection-start-line="66" selection-end-line="67" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#350#842#0" />
             <element signature="e#882#1124#0" />
-            <element signature="e#1166#3668#0" />
-            <element signature="e#1287#1880#0" />
-            <element signature="e#3704#4124#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/feeds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="59" column="110" selection-start-line="59" selection-start-column="110" selection-end-line="59" selection-end-column="110" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#strong#0;n#p#0;n#div#0;n#small#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/feeds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="1" selection-start-line="5" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Faster/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="e#640#681#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basics/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state relative-caret-position="-351">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basics/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

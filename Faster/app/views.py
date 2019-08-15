@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from django.views import View
 from django.core.cache import cache
 from .models import Article
+from basics.models import RssSubscription
 # Create your views here.
 
 
@@ -44,6 +45,10 @@ class IndexView(InfoListView):
     def get_queryset_cache_key(self):
         cache_key = 'index'
         return cache_key
+
+    def get_context_data(self, **kwargs):
+        kwargs['rss_info'] = RssSubscription.objects.filter(status='p').order_by('-id')
+        return super(IndexView, self).get_context_data(**kwargs)
 
 
 class ComprehensiveView(ListView):

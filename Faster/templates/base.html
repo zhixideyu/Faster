@@ -37,10 +37,36 @@
             </div>
 
             {#            <a class="bb-T b-L bb-TT">#}
-            <a class="rss bb-T b-L" href="{% url 'feed' %}" target="_blank">
+            <a class="bb-T b-L" data-target="#myModal2" data-toggle="modal">
                 <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
                      width="50"/></a>
-
+            <div class="modal inmodal" id="myModal2" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content animated flipInY">
+                        <div class="modal-header">
+                            <button class="close" type="button" data-dismiss="modal"><span
+                                    aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" style="color: darksalmon">RSS 订阅</h4>
+                            <small class="font-bold" style="color: darksalmon">您可以选择下面任意链接进行订阅。
+                            </small>
+                        </div>
+                        <small class="font-bold">
+                            <div class="modal-body">
+                                {% for info in rss_info %}
+                                    <h4><p style="color: darksalmon">{{ info.title }}：<strong style="color: #0d8ddb">{{ info.href }}</strong></p></h4>
+                                {% endfor %}
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" type="button" data-dismiss="modal">关闭</button>
+                            </div>
+                        </small>
+                    </div>
+                    <small class="font-bold">
+                    </small>
+                </div>
+                <small class="font-bold">
+                </small>
+            </div>
             {#            <div class="rss bb-T b-L">#}
             {#                <a href="{% url 'feed' %}" target="_blank"><img src="https://file.ipadown.com/tophub/assets/images/hi.png"#}
             {#                     width="50"/></a></a>#}
@@ -80,8 +106,8 @@
                 <div class="title">设置选项</div>
             </li>
             <li class="item darkmode" id="switch">
-                    <div class="title">夜间模式</div>
-                    <div class="switch"></div>
+                <div class="title">夜间模式</div>
+                <div class="switch"></div>
             </li>
             <li class="item divider"></li>
         </ul>
