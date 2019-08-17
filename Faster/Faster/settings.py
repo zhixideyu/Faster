@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'user',
     'ckeditor',
     'basics',
+    'feed',
 
     'allauth',
     'allauth.account',
@@ -69,7 +70,7 @@ ROOT_URLCONF = 'Faster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'feed/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

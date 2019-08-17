@@ -25,9 +25,9 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^user/', include('user.url')),
     url(r'^article/', include('basics.url')),
-    url(r'^feed/$', AllArticleRssFeed(), name='feed'),
     url(r'^feed_baidu_hot/$', BaiDuHotRssFeed(), name='baidu_hot'),
     url(r'^feed_weibo_hot/$', WeiBoHotRssFed(), name='weibo_hot'),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
+    url(r'^science/', include('feed.url')),
     url(r'^', include('app.url')),
 ]
