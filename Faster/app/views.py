@@ -47,7 +47,7 @@ class IndexView(InfoListView):
         return cache_key
 
     def get_context_data(self, **kwargs):
-        kwargs['rss_info'] = RssSubscription.objects.filter(status='p').order_by('-id')
+        kwargs['index'] = True
         return super(IndexView, self).get_context_data(**kwargs)
 
 
@@ -59,9 +59,17 @@ class ComprehensiveView(ListView):
         queryset = Article.objects.all()
         return queryset
 
+    def get_context_data(self, **kwargs):
+        kwargs['gather'] = True
+        return super(ComprehensiveView, self).get_context_data(**kwargs)
+
 
 class ScienceView(ListView):
-    pass
+    template_name = 'tools.html'
+
+    def get_context_data(self, **kwargs):
+        kwargs['science'] = True
+        return super(ScienceView, self).get_context_data(**kwargs)
 
 
 class RecreationView(ListView):
@@ -71,6 +79,10 @@ class RecreationView(ListView):
 
     def get_queryset(self):
         return
+
+    def get_context_data(self, **kwargs):
+        kwargs['recreation'] = True
+        return super(RecreationView, self).get_context_data(**kwargs)
 
 
 class PythonView(ListView):

@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'basics',
     'feed',
 
+    'django_crontab',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -78,6 +80,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'basics.context_processor.rss_info',
             ],
         },
     },
@@ -180,3 +184,6 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+CRONJOBS = [
+    ('*/2 * * * *', 'feed.cron.start_rss_spider')
+]

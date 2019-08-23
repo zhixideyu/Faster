@@ -53,7 +53,8 @@
                         <small class="font-bold">
                             <div class="modal-body">
                                 {% for info in rss_info %}
-                                    <h4><p style="color: darksalmon">{{ info.title }}：<strong style="color: #0d8ddb">{{ info.href }}</strong></p></h4>
+                                    <h4><p style="color: darksalmon">{{ info.title }}：<strong
+                                            style="color: #0d8ddb">{{ info.href }}</strong></p></h4>
                                 {% endfor %}
                             </div>
                             <div class="modal-footer">
@@ -117,21 +118,37 @@
     <div class="kb-lb-ib">
         <div class="kb-lb-ib-hb">
             <div class="kb-lb-ib-c">
-                <a class="F-gb F-gb-jb" href="/">
-                    <div class="gb-c">首页</div>
-                    <div class="n w-n"></div>
+                {% if index %}
+                    <a class="F-gb F-gb-jb" href="/">
+                {% else %}
+                    <a class="F-gb" href="/">
+                {% endif %}
+                <div class="gb-c">首页</div>
+                <div class="n w-n"></div>
                 </a>
-                <a class="F-gb" href="{% url 'gather' %}">
-                    <div class="gb-c">综合</div>
-                    <div class="n sb-n"></div>
+                {% if gather %}
+                    <a class="F-gb F-gb-jb" href="{% url 'gather' %}">
+                {% else %}
+                    <a class="F-gb" href="{% url 'gather' %}">
+                {% endif %}
+                <div class="gb-c">综合</div>
+                <div class="n sb-n"></div>
                 </a>
-                <a class="F-gb" href="{% url 'feed' %}">
-                    <div class="gb-c">科技</div>
-                    <div class="n x-n"></div>
+                {% if feed %}
+                    <a class="F-gb F-gb-jb" href="{% url 'feed' %}">
+                {% else %}
+                    <a class="F-gb" href="{% url 'feed' %}">
+                {% endif %}
+                <div class="gb-c">科技</div>
+                <div class="n x-n"></div>
                 </a>
-                <a class="F-gb" href="{% url 'recreation' %}">
-                    <div class="gb-c">娱乐</div>
-                    <div class="n y-n"></div>
+                {% if recreation %}
+                    <a class="F-gb F-gb-jb" href="{% url 'recreation' %}">
+                {% else %}
+                    <a class="F-gb" href="{% url 'recreation' %}">
+                {% endif %}
+                <div class="gb-c">娱乐</div>
+                <div class="n y-n"></div>
                 </a>
                 <a class="F-gb" href="">
                     <div class="gb-c">编程</div>
@@ -176,6 +193,8 @@
 <!-- Peity -->
 <script src="{% static '/hadmin/js/plugins/peity/jquery.peity.min.js' %}"></script>
 <!-- Vue-->
+<script>
+</script>
 {% block script %}
 {% endblock %}
 </html>

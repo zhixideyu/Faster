@@ -1,229 +1,305 @@
 {% extends 'base.html' %}
 {% block div %}
-    <div class="col-sm-2">
-        <div class="ibox float-e-margins">
-            <div id="ibox-content">
+    <div class="tabs-container">
+        <div class="tabs-left">
+            <ul class="nav nav-tabs">
+                {#                <li class="active"><a data-toggle="tab" href="#tab-8" aria-expanded="true"> 第一个选项卡</a>#}
+                </li>
+                <li class="active"><a data-toggle="tab" href="#tab-9" aria-expanded="false"> 自定义RSS源须知</a>
+                </li>
+                <li class=""><a data-toggle="tab" href="#tab-10" aria-expanded="false">网页匹配--自定义RSS源工具</a>
+                </li>
+                <li class=""><a data-toggle="tab" href="#tab-11" aria-expanded="false">JSON匹配--自定义RSS源工具</a>
+                </li>
+            </ul>
+            <div class="tab-content col-sm-8">
+                {#                <div id="tab-8" class="tab-pane active">#}
+                {#                    {% include 'rsshub.html' %}#}
+                {#                </div>#}
+                <div id="tab-9" class="tab-pane ibox float-e-margins active">
+                    <div id="ibox-content">
 
-                <div class="vertical-container light-timeline" id="vertical-timeline">
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg fa-spin">
-                            <i class="fa fa-circle-o-notch"></i>
-                        </div>
-                        <div class="vertical-timeline-content">
-                            <h2>第一步</h2>
-                            <p>输入正确原页面地址，编码格式默认为utf8。</p>
-                            <p>HTML源代码中若含有乱码，将编码格式设置为gbk或其它格式。</p>
-                        </div>
-                    </div>
+                        <div class="vertical-container light-timeline" id="vertical-timeline">
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon navy-bg fa-spin">
+                                    <i class="fa fa-circle-o-notch"></i>
+                                </div>
+                                <div class="vertical-timeline-content">
+                                    <h2>第一步</h2>
+                                    <p>注意：所有可选项都有默认值，如果未输入就按照默认值执行！</p>
+                                    <p>输入正确原页面地址，编码格式默认为utf8。</p>
+                                    <p>HTML源代码中若含有乱码，将编码格式设置为gbk或其它格式。</p>
+                                </div>
+                            </div>
 
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon blue-bg fa-spin">
-                            <i class="fa fa-circle-o-notch"></i>
-                        </div>
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon blue-bg fa-spin">
+                                    <i class="fa fa-circle-o-notch"></i>
+                                </div>
 
-                        <div class="vertical-timeline-content">
-                            <h2>第二步</h2>
-                            <p>使用正则表达式进行筛选数据，只支持筛选两种数据，例如：标题链接和标题。</p>
-                            <p>推荐使用贪婪匹配和非贪婪匹配进行筛选。</p>
-                        </div>
-                    </div>
+                                <div class="vertical-timeline-content">
+                                    <h2>第二步</h2>
+                                    <p>使用正则表达式进行筛选数据，只支持筛选两种数据，例如：标题链接和标题。</p>
+                                    <p>推荐使用贪婪匹配和非贪婪匹配进行筛选。</p>
+                                    <p>下一页：选取访问当前页面的时候，在特定地方展示下一页的url的对应正则。</p>
+                                </div>
+                            </div>
 
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon lazur-bg fa-spin">
-                            <i class="fa fa-circle-o-notch"></i>
-                        </div>
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon lazur-bg fa-spin">
+                                    <i class="fa fa-circle-o-notch"></i>
+                                </div>
 
-                        <div class="vertical-timeline-content">
-                            <h2>第三步</h2>
-                            <p>定义Feed的标题和链接，推荐使用默认值。</p>
-                            <p>Feed描述可不填。</p>
-                        </div>
-                    </div>
+                                <div class="vertical-timeline-content">
+                                    <h2>第三步</h2>
+                                    <p>定义Feed的标题和链接，推荐使用默认值。</p>
+                                    <p>Feed描述可不填。</p>
+                                </div>
+                            </div>
 
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon yellow-bg fa-spin">
-                            <i class="fa fa-circle-o-notch"></i>
-                        </div>
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon yellow-bg fa-spin">
+                                    <i class="fa fa-circle-o-notch"></i>
+                                </div>
 
-                        <div class="vertical-timeline-content">
-                            <h2>第四步</h2>
-                            <p>点击Create创建源</p>
-                        </div>
-                    </div>
+                                <div class="vertical-timeline-content">
+                                    <h2>第四步</h2>
+                                    <p>点击Create创建源</p>
+                                </div>
+                            </div>
 
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon lazur-bg fa-spin">
-                            <i class="fa fa-circle-o-notch"></i>
-                        </div>
+                            <div class="vertical-timeline-block">
+                                <div class="vertical-timeline-icon lazur-bg fa-spin">
+                                    <i class="fa fa-circle-o-notch"></i>
+                                </div>
 
-                        <div class="vertical-timeline-content">
-                            <h2>第五步</h2>
-                            <p>使用RSS订阅工具来订阅这个源</p>
-                            <p></p>
+                                <div class="vertical-timeline-content">
+                                    <h2>第五步</h2>
+                                    <p>使用RSS订阅工具来订阅这个源</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="form-group">
-            <div class="row">
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="col-md-8">
-                        <input id='target_url' name="target_url" type="text" placeholder="指定源页面地址(URL)"
-                               class="form-control">
+                <div id="tab-10" class="tab-pane">
+                    <div class="form-group">
+                        <div class="row">
+                            <form method="post" name="form1">
+                                {% csrf_token %}
+                                <div class="col-md-8">
+                                    <input id='target_url' name="target_url" type="text" placeholder="指定源页面地址(URL)"
+                                           class="form-control">
+                                </div>
+                                <div class="col-md-2">
+                                    <input id='encode' name="encode" type="text" placeholder="编码格式(可选)"
+                                           class="form-control">
+                                </div>
+                                &nbsp;&nbsp;&nbsp;
+                                <button type="submit" class="btn btn-w-m btn-danger" id="reload">Reload
+                                </button>
+                                <div id="load" class="sk-spinner sk-spinner-wave hidden">
+                                    <div class="sk-rect1"></div>
+                                    <div class="sk-rect2"></div>
+                                    <div class="sk-rect3"></div>
+                                    <div class="sk-rect4"></div>
+                                    <div class="sk-rect5"></div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <input id='encode' name="encode" type="text" placeholder="编码格式" class="form-control">
-                    </div>
-                    &nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-w-m btn-danger" id="reload">Reload</button>
-                    <div id="load" class="sk-spinner sk-spinner-wave hidden">
-                        <div class="sk-rect1"></div>
-                        <div class="sk-rect2"></div>
-                        <div class="sk-rect3"></div>
-                        <div class="sk-rect4"></div>
-                        <div class="sk-rect5"></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <div>
-            <p>下面是检索页面的HTML源代码。使用它来设置提取规则。</p>
-            <p>页面结果: </p>
-            <div>
-                <textarea id="page_code" class="form-control" placeholder="HTML源代码..." style="height:200px;"></textarea>
-            </div>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <div class="row">
-            <form method="post">
-                {% csrf_token %}
-                <div class="col-md-8">
-                    <input id="pattern" name="pattern" type="text" placeholder="正则表达式，注意中英文" class="form-control">
-                </div>
-                &nbsp;&nbsp;&nbsp;
-                <a class="btn btn-success" href="https://www.runoob.com/python/python-reg-expressions.html"
-                   target="_blank">
-                    <i class="fa fa-book"></i> Re 教程
-                </a>
-                &emsp;&emsp;&emsp;
-                <button type="submit" class="btn btn-w-m btn-danger" id="extract">Extract</button>
-                <div id="load2" class="sk-spinner sk-spinner-wave hidden">
-                    <div class="sk-rect1"></div>
-                    <div class="sk-rect2"></div>
-                    <div class="sk-rect3"></div>
-                    <div class="sk-rect4"></div>
-                    <div class="sk-rect5"></div>
-                </div>
-            </form>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <div>
-            <p>下面是提取的文本片段列表。</p>
-            <div>
-                <textarea id="page_result" class="form-control" placeholder="筛选结果..." style="height:200px;"></textarea>
-            </div>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <div>
-            <p>定义输出格式。</p>
-            <p>在订阅RSS时，一些RSS阅读器可能会将它们显示给用户。</p>
-            <div class="roll-left">
-                <form method="post">
-                    {% csrf_token %}
-                    <div>
-                        <p>Feed Title: </p>
-                        <input id="title" name="title_name" class="form-control input-lg m-b" type="text" required>
-                    </div>
-                    <div>
-                        <p>Feed Link: </p>
-                        <input id="link" name="link" class="form-control m-b" type="text" required>
-                    </div>
-                    <p>Feed Description(可选): </p>
-                    <textarea id="description" name="description" class="form-control" placeholder="快捷社区：专注于发现和分享！"
-                              style="height:100px;"></textarea>
                     <div class="hr-line-dashed"></div>
-                    <button id="create" type="submit" class="btn btn-w-m btn-danger" style="float: right">Create
-                    </button>
-                    <div id="load3" class="sk-spinner sk-spinner-wave hidden">
-                        <div class="sk-rect1"></div>
-                        <div class="sk-rect2"></div>
-                        <div class="sk-rect3"></div>
-                        <div class="sk-rect4"></div>
-                        <div class="sk-rect5"></div>
+                    <div>
+                        <p>下面是检索页面的HTML源代码。使用它来设置提取规则。</p>
+                        <p>页面结果: </p>
+                        <div>
+                        <textarea id="page_code" value="" class="form-control" placeholder="HTML源代码..."
+                                  style="height:200px;"></textarea>
+                        </div>
                     </div>
-                </form>
+                    <div class="hr-line-dashed"></div>
+                    <div class="row">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="col-md-8">
+                                <input id="pattern" name="pattern" type="text" placeholder="链接(必选)  标题(必选)  描述(可选)"
+                                       class="form-control">
+                                <div class="eb-fb"></div>
+                                <input id="next_page" name="next_page" type="text" placeholder="下一页(可选)"
+                                       class="form-control">
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-success"
+                               href="https://www.runoob.com/python/python-reg-expressions.html"
+                               target="_blank">
+                                <i class="fa fa-book"></i> Re 教程
+                            </a>
+                            &emsp;&emsp;&emsp;
+                            <button type="submit" class="btn btn-w-m btn-danger" id="extract" name="extract"
+                                    value="extract">Extract
+                            </button>
+                            <div id="load2" class="sk-spinner sk-spinner-wave hidden">
+                                <div class="sk-rect1"></div>
+                                <div class="sk-rect2"></div>
+                                <div class="sk-rect3"></div>
+                                <div class="sk-rect4"></div>
+                                <div class="sk-rect5"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div>
+                        <p>下面是提取的文本片段列表。</p>
+                        <div>
+                        <textarea id="page_result" class="form-control" placeholder="筛选结果...(尽量保证数据的纯洁性)"
+                                  style="height:200px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div>
+                        <p>定义输出格式。</p>
+                        <p>在订阅RSS时，一些RSS阅读器可能会将它们显示给用户。</p>
+                        <div class="roll-left">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div>
+                                    <p>Feed Title: </p>
+                                    <input id="title" name="title_name" class="form-control input-lg m-b"
+                                           type="text"
+                                           required>
+                                </div>
+                                <div>
+                                    <p>Feed Link: </p>
+                                    <input id="link" name="link" class="form-control m-b" type="text" required>
+                                    <input name="create" id="creates" value="create" type="hidden"/>
+                                </div>
+                                <p>Feed Description(可选): </p>
+                                <textarea id="description" name="description" class="form-control"
+                                          placeholder="快捷社区：专注于发现和分享！"
+                                          style="height:100px;"></textarea>
+                                <div class="hr-line-dashed"></div>
+                                <button id="create" type="submit"
+                                        class="btn btn-w-m btn-danger"
+                                        style="float: right">Create
+                                </button>
+                                <div id="load3" class="sk-spinner sk-spinner-wave hidden">
+                                    <div class="sk-rect1"></div>
+                                    <div class="sk-rect2"></div>
+                                    <div class="sk-rect3"></div>
+                                    <div class="sk-rect4"></div>
+                                    <div class="sk-rect5"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="eb-fb">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div id="result" class="hidden">
+                        <p>Your feed is ready!</p>
+                        <p href="">Feed URL: <i class="fa fa-rss-square" style="color: darksalmon"></i> <a href=""
+                                                                                                           target="_blank"
+                                                                                                           id="rss_url"></a>
+                        </p>
+                        <p>Point your feed reader to this URL or click to open it.</p>
+                        <p><i class="fa fa-hand-o-right"></i> 温馨提示：记得保存！</p>
+                    </div>
+                </div>
+                <div id="tab-11" class="tab-pane active">
+                    {% include 'rsshub.html' %}
+                </div>
             </div>
         </div>
-        <div class="eb-fb">
-        </div>
-        <div class="hr-line-dashed"></div>
-        <div id="result" class="hidden">
-            <p>Your feed is ready!</p>
-            <p href="">Feed URL: <i class="fa fa-rss-square" style="color: darksalmon"></i> <a href="" target="_blank"
-                                                                                               id="rss_url"></a></p>
-            <p>Point your feed reader to this URL or click to open it.</p>
-            <p><i class="fa fa-hand-o-right"></i> 温馨提示：记得保存！</p>
-        </div>
     </div>
-    <div class="col-sm-2">
-    </div>
+
+
+
 
 {% endblock %}
 
 {% block script %}
     <script>
-        $('#reload').click(function () {
-            $('#load').removeClass('hidden')
-        });
-        $('#extract').click(function () {
-            $('#load2').removeClass('hidden')
-        });
-        $('#create').click(function () {
-            $('#load3').removeClass('hidden')
-        });
         $.ajaxSetup({
             data: {csrfmiddlewaretoken: '{{ csrf_token }}'}
         });
-        $('form').submit(function (even) {
+        $('#reload').click(function (even) {
             even.preventDefault();
+            $('#load').removeClass('hidden');
             $.ajax({
+                type: 'POST',
+                url: '{% url 'feed' %}',
+                data: {
+                    'target_url': $('#target_url').val(),
+                    'encode': $('#encode').val(),
+                },
+                async: true,
+                success: function (data) {
+                    if (data.status == 1) {
+                        $('#page_code').text(data.msg);
+                        $('#load').addClass('hidden');
+                    } else {
+                        alert(data.msg);
+                        $('#load').addClass('hidden');
+                    }
+                }
+            })
+        });
+
+        $('#extract').click(function (even) {
+            even.preventDefault();
+            $('#load2').removeClass('hidden');
+            $.ajax({
+                type: 'POST',
                 url: '{% url 'feed' %}',
                 data: {
                     'target_url': $('#target_url').val(),
                     'encode': $('#encode').val(),
                     'pattern': $('#pattern').val(),
-                    'title_name': $('#title').val(),
-                    'link': $('#link').val(),
+                    'next_page': $('#next_page').val(),
                 },
-                type: 'POST',
                 async: true,
-                success: function (data, status, xhr) {
+                success: function (data) {
                     if (data.status == 1) {
-                        $('#load').addClass('hidden');
-                        $('#page_code').text(data.msg);
                         $('#page_result').text(data.infos);
                         document.getElementById('title').value = data.title;
                         document.getElementById('link').value = data.link;
                         $('#load2').addClass('hidden');
-                    } else if (data.status == 2) {
+                    } else {
+                        alert(data.msg);
+                        $('#load2').addClass('hidden');
+
+                    }
+                }
+            })
+        });
+
+        $('#create').click(function (even) {
+            even.preventDefault();
+            $('#load3').removeClass('hidden');
+            $.ajax({
+                type: 'POST',
+                url: '{% url 'feed' %}',
+                data: {
+                    'target_url': $('#target_url').val(),
+                    'encode': $('#encode').val(),
+                    'pattern': $('#pattern').val(),
+                    'next_page': $('#next_page').val(),
+                    'title_name': $('#title').val(),
+                    'link': $('#link').val(),
+                    'create': $('#creates').val(),
+                },
+                async: true,
+                success: function (data) {
+                    if (data.status == 1) {
                         $('#result').removeClass('hidden');
                         $('#load3').addClass('hidden');
                         $('#rss_url').text(data.url);
                         document.getElementById('rss_url').href = data.url;
-
-                    } else {
+                    }else {
                         alert(data.msg);
-                        $('#load').addClass('hidden');
-                        $('#load2').addClass('hidden');
+                        $('#load3').addClass('hidden');
                     }
                 }
             })
-
         })
 
     </script>
