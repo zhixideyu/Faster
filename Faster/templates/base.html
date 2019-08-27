@@ -35,8 +35,6 @@
                     </div>
                     快捷社区</a>
             </div>
-
-            {#            <a class="bb-T b-L bb-TT">#}
             <a class="bb-T b-L" data-target="#myModal2" data-toggle="modal">
                 <img src="https://file.ipadown.com/tophub/assets/images/hi.png"
                      width="50"/></a>
@@ -62,16 +60,8 @@
                             </div>
                         </small>
                     </div>
-                    <small class="font-bold">
-                    </small>
                 </div>
-                <small class="font-bold">
-                </small>
             </div>
-            {#            <div class="rss bb-T b-L">#}
-            {#                <a href="{% url 'feed' %}" target="_blank"><img src="https://file.ipadown.com/tophub/assets/images/hi.png"#}
-            {#                     width="50"/></a></a>#}
-            {#            </div>#}
             <div id="accounts-button" class="S-T b-L">
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
@@ -168,7 +158,6 @@
 <div class="c-d c-d-e">
     {% block div %}
     {% endblock %}
-</div>
 </div>
 
 </body>

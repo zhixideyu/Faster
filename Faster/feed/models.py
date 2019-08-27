@@ -19,6 +19,7 @@ class RssInfoSpider(models.Model):
     encode = models.CharField(max_length=20, verbose_name='编码格式', blank=True, null=True)
     xml_name = models.CharField(max_length=50, verbose_name='xml文件名', blank=False, null=True)
     add_time = models.DateTimeField(default=datetime.now, blank=True, null=False, verbose_name='添加时间')
+    type = models.CharField(max_length=20, default='html', blank=False, null=True, verbose_name='数据类型')
 
     class Meta:
         db_table = 'rss_info_spider'

@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="718f865d-870e-47a4-b633-e63e8ca9caf8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Faster/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Faster/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/cron.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/feeds.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feeds.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/xml_html/1566292238.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/xml_html/1566373751.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rsshub.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rss/json_matching.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tools.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +40,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2079">
+              <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/cron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+            <state relative-caret-position="283">
+              <caret line="120" column="38" lean-forward="true" selection-start-line="120" selection-start-column="38" selection-end-line="120" selection-end-column="38" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
@@ -51,10 +65,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4793">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/feeds.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="270">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/rss/page_matching.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -62,35 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="294" column="53" lean-forward="true" selection-start-line="294" selection-start-column="53" selection-end-line="294" selection-end-column="53" />
-              <folding>
-                <element signature="e#306#418#0#HTML" />
-                <element signature="e#541#647#0#HTML" />
-                <element signature="e#811#4063#0#HTML" />
-                <element signature="e#893#4040#0#HTML" />
-                <element signature="e#6677#6683#0#HTML" expanded="true" />
-                <element signature="e#6683#6689#0#HTML" expanded="true" />
-                <element signature="e#6689#6695#0#HTML" expanded="true" />
-                <element signature="e#7021#7027#0#HTML" expanded="true" />
-                <element signature="e#7027#7033#0#HTML" expanded="true" />
-                <element signature="e#7033#7039#0#HTML" expanded="true" />
-                <element signature="e#7712#8024#0#HTML" />
-                <element signature="e#9626#9646#0#HTML" expanded="true" />
-                <element signature="e#10215#10881#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-331">
-              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="351">
+              <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -100,46 +123,46 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Setup Script" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>STATIC_ROOT</find>
-      <find>block_code</find>
-      <find>switch</find>
-      <find>1</find>
-      <find>title</find>
-      <find>RequestContext</find>
-      <find>context_processors</find>
-      <find>ss</find>
-      <find>RE</find>
-      <find>pattern</find>
-      <find>inc</find>
-      <find>nextpage</find>
-      <find>rss_info</find>
-      <find>tab-8</find>
-      <find>筛选</find>
-      <find>RssSpider</find>
-      <find>RssInfoSpider</find>
-      <find>tab-9</find>
-      <find>link</find>
-      <find>http://www.badaoliu.com/http://www.badaoliu.com/archives/6799/</find>
-      <find>extr</find>
       <find>Reload</find>
       <find>form</find>
-      <find>description</find>
       <find>submit</find>
-      <find>reload</find>
-      <find>page_code</find>
-      <find>page_result</find>
       <find>create</find>
       <find>button</find>
+      <find>你的输入不相同</find>
+      <find>你的输入不相同</find>
+      <find>pattern</find>
+      <find>page_result</find>
+      <find>form1</find>
+      <find>link</find>
+      <find>extract</find>
+      <find>reload</find>
+      <find>infos</find>
+      <find>description</find>
+      <find>target_description</find>
+      <find>colo</find>
+      <find>page_code</find>
+      <find>textarea</find>
+      <find>ex</find>
+      <find>load3</find>
+      <find>json_description</find>
+      <find>json_link</find>
+      <find>json_rss_url</find>
+      <find>json_create</find>
+      <find>json_create_button</find>
+      <find>rss_info</find>
+      <find>json_feed_title</find>
+      <find>title</find>
+      <find>target_url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,13 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/toastr_notifications.html" />
-        <option value="$PROJECT_DIR$/basics/templates/xx.html" />
-        <option value="$PROJECT_DIR$/static/header/css/app.css" />
-        <option value="$PROJECT_DIR$/static/hadmin/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/forum_main.html" />
-        <option value="$PROJECT_DIR$/templates/search_results.html" />
-        <option value="C:/tools/Python/Python35-32/Lib/site-packages/notebook/static/style/style.min.css" />
         <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/app/url.py" />
         <option value="$PROJECT_DIR$/basics/templates/article.html" />
@@ -174,9 +190,7 @@
         <option value="$PROJECT_DIR$/basics/url.py" />
         <option value="$PROJECT_DIR$/Faster/utils.py" />
         <option value="$PROJECT_DIR$/user/views.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/django_nginx.conf" />
-        <option value="$PROJECT_DIR$/templates/account/login.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/basics/feeds.py" />
         <option value="$PROJECT_DIR$/basics/models.py" />
@@ -188,19 +202,33 @@
         <option value="$PROJECT_DIR$/basics/context_processor.py" />
         <option value="$PROJECT_DIR$/feed/templates/xml_html/1565944167.xml" />
         <option value="$PROJECT_DIR$/feed/templates/xml_html/1566268682.xml.html" />
-        <option value="$PROJECT_DIR$/feed/url.py" />
         <option value="$PROJECT_DIR$/Faster/settings.py" />
         <option value="$PROJECT_DIR$/feed/admin.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/feed/models.py" />
-        <option value="$PROJECT_DIR$/feed/feeds.py" />
         <option value="$PROJECT_DIR$/templates/rsshub.html" />
-        <option value="$PROJECT_DIR$/templates/tools.html" />
-        <option value="$PROJECT_DIR$/feed/views.py" />
+        <option value="$PROJECT_DIR$/templates/page_matching.html" />
+        <option value="$PROJECT_DIR$/static/custom.py" />
+        <option value="$PROJECT_DIR$/static/custom/rss.js" />
+        <option value="$PROJECT_DIR$/static/highlights/trac.css" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/account/login.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/feed/form.py" />
+        <option value="$PROJECT_DIR$/feed/url.py" />
+        <option value="$PROJECT_DIR$/feed/feeds.py" />
+        <option value="$PROJECT_DIR$/templates/rss/json_matching.html" />
         <option value="$PROJECT_DIR$/feed/cron.py" />
+        <option value="$PROJECT_DIR$/feed/models.py" />
+        <option value="$PROJECT_DIR$/feed/views.py" />
+        <option value="$PROJECT_DIR$/templates/tools.html" />
+        <option value="$PROJECT_DIR$/templates/rss/page_matching.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -216,9 +244,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-11" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="346" />
+    <option name="y" value="445" />
+    <option name="width" value="1664" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -238,7 +267,23 @@
             <path>
               <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
               <item name="Faster" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
               <item name="feed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Faster" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="rss" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,6 +303,15 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/image/head" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -265,19 +319,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\Faster\basics" />
-      <recent name="E:\project\Faster\static\ckeditor2" />
-      <recent name="E:\project\Faster\static\hadmin\css" />
-      <recent name="E:\project\Faster\templates\blog" />
-      <recent name="E:\project\Faster\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\Faster\static\image\head" />
       <recent name="E:\project\Faster\static\hadmin\css" />
       <recent name="E:\project\Faster\static" />
       <recent name="E:\project\Faster\static\highlights" />
       <recent name="E:\project\Faster\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\Faster\templates\rss_tool" />
+      <recent name="E:\project\Faster\basics" />
+      <recent name="E:\project\Faster\static\ckeditor2" />
+      <recent name="E:\project\Faster\static\hadmin\css" />
+      <recent name="E:\project\Faster\templates\blog" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,7 +498,7 @@
       <workItem from="1565851311107" duration="5345000" />
       <workItem from="1565856688376" duration="712000" />
       <workItem from="1565857649843" duration="77547000" />
-      <workItem from="1566351115254" duration="58247000" />
+      <workItem from="1566351115254" duration="125980000" />
     </task>
     <servers />
   </component>
@@ -457,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356381000" />
+    <option name="totallyTimeSpent" value="424114000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,23 +526,24 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15925626" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17219079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49474534" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49393696" weight="0.053285968" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32792792" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.5275311" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3321492" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5052546" side_tool="true" weight="0.08348135" />
-      <window_info anchor="bottom" id="manage.py@Faster" order="6" weight="0.053285968" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50606304" side_tool="true" weight="0.1651865" />
+      <window_info anchor="bottom" id="manage.py@Faster" order="6" weight="0.40852576" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.47207206" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.3981982" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.47069272" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39786857" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3285968" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.15275311" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.28774422" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.3268206" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -498,28 +553,29 @@
       <window_info anchor="right" id="Database" order="5" weight="0.32983023" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16814874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1414713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.348135" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49717057" weight="0.19893429" />
-      <window_info anchor="bottom" id="Database Changes" order="3" weight="0.3285968" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.3285968" />
-      <window_info anchor="bottom" id="Python Console" order="5" weight="0.5275311" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3321492" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50282943" side_tool="true" weight="0.41207814" />
-      <window_info anchor="bottom" id="manage.py@Faster" order="8" weight="0.52575487" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.47207206" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.3981982" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49474534" weight="0.053285968" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32792792" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.5275311" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.3321492" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5052546" side_tool="true" weight="0.08348135" />
+      <window_info anchor="bottom" id="manage.py@Faster" order="7" weight="0.053285968" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.47207206" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.3981982" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.3285968" />
+      <window_info anchor="bottom" id="File Transfer" order="14" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.3268206" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32983023" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.32983023" />
     </layout-to-restore>
@@ -540,122 +596,6 @@
     <SUITE FILE_PATH="coverage/Faster$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1566277227585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/image/head/super_user.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/django_nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basics/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/contrib/syndication/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Faster/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hadmin/css/style862f.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2119" column="1" selection-start-line="2119" selection-start-column="1" selection-end-line="2119" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
-          <folding>
-            <element signature="e#168#7355#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basics/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Faster/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="e#640#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/forum_main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/header/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/url.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -679,9 +619,6 @@
           <caret line="4" column="65119" selection-start-line="4" selection-start-column="65119" selection-end-line="4" selection-end-column="65119" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search_results.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/templates/xml_html/1566186082.xml" />
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/db/models/fields/__init__.py">
@@ -765,23 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="139" column="53" selection-start-line="139" selection-start-column="53" selection-end-line="139" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -819,75 +739,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/201545290/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forum_main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+        <state relative-caret-position="-3645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/head/super_user.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/custom.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/custom/rss.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hadmin/js/plugins/validate/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/highlights/trac.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1002">
+          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1323">
+          <caret line="165" column="36" lean-forward="true" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2659">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/form.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/remote_sources/-812813715/1405239563/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2079">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hadmin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="6293" column="26" selection-start-line="6293" selection-start-column="26" selection-end-line="6293" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3753">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search_results.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/templates/xml_html/1566809831.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rss/json_matching.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="87" column="127" selection-start-line="87" selection-start-column="115" selection-end-line="87" selection-end-column="127" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="270">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rsshub.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/feeds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tools.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="294" column="53" lean-forward="true" selection-start-line="294" selection-start-column="53" selection-end-line="294" selection-end-column="53" />
-          <folding>
-            <element signature="e#306#418#0#HTML" />
-            <element signature="e#541#647#0#HTML" />
-            <element signature="e#811#4063#0#HTML" />
-            <element signature="e#893#4040#0#HTML" />
-            <element signature="e#6677#6683#0#HTML" expanded="true" />
-            <element signature="e#6683#6689#0#HTML" expanded="true" />
-            <element signature="e#6689#6695#0#HTML" expanded="true" />
-            <element signature="e#7021#7027#0#HTML" expanded="true" />
-            <element signature="e#7027#7033#0#HTML" expanded="true" />
-            <element signature="e#7033#7039#0#HTML" expanded="true" />
-            <element signature="e#7712#8024#0#HTML" />
-            <element signature="e#9626#9646#0#HTML" expanded="true" />
-            <element signature="e#10215#10881#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        <state relative-caret-position="-4793">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2079">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/feeds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feed/cron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+        <state relative-caret-position="283">
+          <caret line="120" column="38" lean-forward="true" selection-start-line="120" selection-start-column="38" selection-end-line="120" selection-end-column="38" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tools.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rss/page_matching.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
         </state>
       </provider>
     </entry>

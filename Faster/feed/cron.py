@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 import re
+import json
 import requests
+import jmespath
 from lxml import etree
 from .models import RssInfoSpider, RssResultInfo
 
@@ -79,12 +81,8 @@ def process_data(request, rss_info, xml_name, feed_title):
     filterout_title = request.GET.get('filterout_title')
     rss_rule_info = RssInfoSpider.objects.get(xml_name=xml_name)
     for info in rss_info:
-        if len(info) == 3:
-            description = info[2]
-        else:
-            description = '快捷社区：专注于发现和分享！'
         RssResultInfo(
-            xml_name_id=rss_rule_info.id, url=info[0], title=info[1], description=description,
+            xml_name_id=rss_rule_info.id, url=info[0], title=info[1],
             feed_titile=feed_title, feed_url=rss_rule_info.url
             ).save()
     if filterout_title:
@@ -93,7 +91,7 @@ def process_data(request, rss_info, xml_name, feed_title):
         rss_info = RssResultInfo.objects.filter(title__icontains=filter_title).all().values()
     else:
         rss_info = RssResultInfo.objects.all().values()
-    return [(info['url'], info['title'], info['description']) for info in rss_info]
+    return [(info['url'], info['title']) for info in rss_info]
 
 
 def start_rss_spider():
@@ -114,3 +112,12 @@ def start_rss_spider():
             RssResultInfo(title=info[1], url=info[0], description=info[2], xml_name_id=xml_name_id, feed_titile=target_title, feed_url=url).save()
 
 
+class JMESPathExtractor(object):
+    """
+    用JMESPath实现的抽取器，对于json格式数据实现简单方式的抽取。
+    """
+    def extract(self, query=None, body=None):
+        try:
+            return jmespath.search(query, json.loads(body))
+        except Exception as e:
+            raise ValueError("Invalid query: " + query + " : " + str(e))

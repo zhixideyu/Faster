@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from django.views.generic import ListView
-from django.views import View
-from django.core.cache import cache
 from .models import Article
+from django.views import View
+from django.shortcuts import render
+from django.core.cache import cache
+from django.views.generic import ListView
 from basics.models import RssSubscription
 # Create your views here.
 
@@ -65,6 +65,8 @@ class ComprehensiveView(ListView):
 
 
 class ScienceView(ListView):
+    """ 科技 """
+
     template_name = 'tools.html'
 
     def get_context_data(self, **kwargs):
@@ -73,6 +75,7 @@ class ScienceView(ListView):
 
 
 class RecreationView(ListView):
+    """ 娱乐 """
 
     context_object_name = 'article_list'
     template_name = 'forum_main.html'

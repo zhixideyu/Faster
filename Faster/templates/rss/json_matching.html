@@ -1,0 +1,92 @@
+<div class="form-group">
+    <form class="form-horizontal" id="json_extract" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="col-sm-10">
+                <span class="help-block m-b-none">JSON地址：</span>
+                <input id="json_url" name="json_url" class="form-control" type="text" required="required">
+            </div>
+        </div>
+        <div class="hr-line-dashed"></div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <span class="help-block m-b-none">提取规则：</span>
+                <span class="help-block m-b-none">1(类似标题)：</span>
+                <input id="json_title" name="json_title" class="form-control" type="text" required="required">
+                <span class="help-block m-b-none">2(类似描述)(可选)：</span>
+                <input id="json_description" name="json_description" class="form-control" type="text">
+                <span class="help-block m-b-none">3(类似链接)：</span>
+                <input id="json_link" name="json_link" class="form-control" type="text" required="required">
+                <span class="help-block m-b-none"><a
+                        href="https://www.json.cn/" target="_blank">点击这里进行json解析</a></span>
+                <input name="json_extract" id="json_extract_button" value="True" type="hidden"/>
+            </div>
+        </div>
+        <div class="hr-line-dashed"></div>
+        <button type="submit"
+                class="btn btn-w-m btn-danger"
+                style="float: right">Extract
+        </button>
+        <div id="load4" class="sk-spinner sk-spinner-wave hidden">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+        <div>
+            <p>下面是提取的文本结果。</p>
+            <p>JSON解析结果: </p>
+            <div>
+                <textarea id="json_page_code" value="" class="form-control" placeholder="筛选结果..."
+                          style="height:200px;"></textarea>
+            </div>
+        </div>
+        <div class="hr-line-dashed"></div>
+    </form>
+</div>
+<div>
+    <p>定义输出格式。</p>
+    <p>在订阅RSS时，一些RSS阅读器可能会将它们显示给用户。</p>
+    <div class="roll-left">
+        <form method="post" id="json_create">
+            {% csrf_token %}
+            <div>
+                <p>Feed Title: </p>
+                <input id="json_feed_title" name="json_feed_title" class="form-control input-lg m-b"
+                       type="text" required="required">
+            </div>
+            <div>
+                <p>Feed Link: </p>
+                <input id="json_feed_link" name="json_feed_link" class="form-control m-b" type="text" required="required"/>
+                <input name="json_create" id="json_create_button" value="True" type="hidden"/>
+            </div>
+            <p>Feed Description(可选): </p>
+            <textarea id="json_feed_description" name="json_feed_description" class="form-control"
+                      placeholder="快捷社区：专注于发现和分享！"
+                      style="height:100px;"></textarea>
+            <div class="hr-line-dashed"></div>
+            <button type="submit"
+                    class="btn btn-w-m btn-danger"
+                    style="float: right">Create
+            </button>
+            <div id="load3" class="sk-spinner sk-spinner-wave hidden">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="eb-fb">
+</div>
+<div class="hr-line-dashed"></div>
+<div id="json_result" class="hidden">
+    <p>Your feed is ready!</p>
+    <p href="">Feed URL: <i class="fa fa-rss-square" style="color: darksalmon"></i> <a href="" target="_blank" id="json_rss_url"></a>
+    </p>
+    <p>Point your feed reader to this URL or click to open it.</p>
+    <p><i class="fa fa-hand-o-right"></i> 温馨提示：记得保存！</p>
+</div>

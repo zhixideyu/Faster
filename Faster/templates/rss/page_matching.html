@@ -1,0 +1,121 @@
+<div class="form-group">
+    <div class="row">
+        <form method="post" id="reload">
+            {% csrf_token %}
+            <div class="col-md-8">
+                <input id='target_url' name="target_url" type="text"
+                       class="form-control" placeholder="HTML地址" required="required"/>
+            </div>
+            <div class="col-md-2">
+                <input id='encode' name="encode" type="text" placeholder="编码格式(可选)"
+                       class="form-control">
+                <input name="reload" id="reload_button" value="True" type="hidden">
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-w-m btn-danger">Reload
+            </button>
+            <div id="load" class="sk-spinner sk-spinner-wave hidden">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="hr-line-dashed"></div>
+<div>
+    <p>下面是检索页面的HTML源代码。使用它来设置提取规则。</p>
+    <p>页面结果: </p>
+    <div>
+                        <textarea id="page_code" value="" class="form-control" placeholder="HTML源代码..."
+                                  style="height:200px;"></textarea>
+    </div>
+</div>
+<div class="hr-line-dashed"></div>
+<div class="row">
+    <form method="post" id="extract">
+        {% csrf_token %}
+        <div class="col-md-8">
+            <input id="pattern" name="pattern" type="text" placeholder="链接(必选)  标题(必选)  描述(可选)"
+                   class="form-control" required="required">
+            <div class="eb-fb"></div>
+            <input id="next_page" name="next_page" type="text" placeholder="下一页(可选)"
+                   class="form-control">
+            <input name="extract" id="extract_button" value="True" type="hidden">
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <a class="btn btn-success"
+           href="https://www.runoob.com/python/python-reg-expressions.html"
+           target="_blank">
+            <i class="fa fa-book"></i> Re 教程
+        </a>
+        &emsp;&emsp;&emsp;
+        <button type="submit" class="btn btn-w-m btn-danger">Extract
+        </button>
+
+        <div id="load2" class="sk-spinner sk-spinner-wave hidden">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </form>
+</div>
+<div class="hr-line-dashed"></div>
+<div>
+    <p>下面是提取的文本片段列表。</p>
+    <div>
+        <textarea id="page_result" class="form-control" placeholder="筛选结果...(尽量保证数据的纯洁性)"
+                  style="height:200px;"></textarea>
+    </div>
+</div>
+<div class="hr-line-dashed"></div>
+<div>
+    <p>定义输出格式。</p>
+    <p>在订阅RSS时，一些RSS阅读器可能会将它们显示给用户。</p>
+    <div class="roll-left">
+        <form method="post" id="create">
+            {% csrf_token %}
+            <div>
+                <p>Feed Title: </p>
+                <input id="title" name="title_name" class="form-control input-lg m-b"
+                       type="text" required="required">
+            </div>
+            <div>
+                <p>Feed Link: </p>
+                <input id="link" name="link" class="form-control m-b" type="text" required="required"/>
+                <input name="create" id="create_button" value="True" type="hidden"/>
+            </div>
+            <p>Feed Description(可选): </p>
+            <textarea id="description" name="description" class="form-control"
+                      placeholder="快捷社区：专注于发现和分享！"
+                      style="height:100px;"></textarea>
+            <div class="hr-line-dashed"></div>
+            <button type="submit"
+                    class="btn btn-w-m btn-danger"
+                    style="float: right">Create
+            </button>
+            <div id="load3" class="sk-spinner sk-spinner-wave hidden">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="eb-fb">
+</div>
+<div class="hr-line-dashed"></div>
+<div id="result" class="hidden">
+    <p>Your feed is ready!</p>
+    <p href="">Feed URL: <i class="fa fa-rss-square" style="color: darksalmon"></i> <a href="" target="_blank"
+                                                                                       id="rss_url"></a>
+    </p>
+    <p>Point your feed reader to this URL or click to open it.</p>
+    <p><i class="fa fa-hand-o-right"></i> 温馨提示：记得保存！</p>
+</div>
